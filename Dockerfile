@@ -10,6 +10,7 @@ RUN Rscript -e 'remotes::install_version(upgrade="never",package = "magrittr", v
 RUN Rscript -e 'remotes::install_version(upgrade="never",package = "purrr", version = "0.3.3")'
 RUN Rscript -e 'remotes::install_version(upgrade="never",package = "rmarkdown", version = "1.16")'
 RUN Rscript -e 'remotes::install_version(upgrade="never",package = "stringr", version = "1.4.0")'
+RUN Rscript -e 'remotes::install_version(upgrade="never",package = "mosaicCore", version = "0.8.0")'
 RUN Rscript -e 'remotes::install_version(upgrade="never",package = "ggplot2", version = "3.2.1")'
 RUN Rscript -e 'remotes::install_version(upgrade="never",package = "ggformula", version = "0.9.1")'
 # RUN Rscript -e 'remotes::install_version(upgrade="never",package = "dplyr", version = "0.8.3")'
