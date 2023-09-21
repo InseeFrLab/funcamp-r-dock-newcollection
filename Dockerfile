@@ -4,7 +4,7 @@ RUN echo "options(repos = c(CRAN = 'https://cran.rstudio.com/'), download.file.m
 RUN R -e 'install.packages("remotes")'
 RUN Rscript -e 'remotes::install_version(upgrade="never",package = "systemfonts", version = "0.1.1")'
 RUN Rscript -e 'remotes::install_github("rstudio/parsons",upgrade="never")'
-RUN Rscript -e 'remotes::install_version(upgrade="never",package = "learnr", version = "0.10.1")'
+RUN Rscript -e 'remotes::install_version(upgrade="never",package = "learnr", version = "0.11.3")'
 # RUN Rscript -e 'remotes::install_version(upgrade="never",package = "tidyverse", version = "1.2.1")'
 # RUN Rscript -e 'remotes::install_version(upgrade="never",package = "magrittr", version = "1.5")'
 # RUN Rscript -e 'remotes::install_version(upgrade="never",package = "purrr", version = "0.3.3")'
