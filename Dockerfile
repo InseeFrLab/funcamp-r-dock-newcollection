@@ -1,12 +1,12 @@
 FROM rocker/r-ver:3.6.3
-RUN apt-get update && apt-get install -y  git-core make pandoc pandoc-citeproc libcurl4-openssl-dev libssl-dev libxml2-dev libcurl4-openssl-dev zlib1g-dev libfontconfig1-dev
-RUN echo "options(repos = c(CRAN = 'https://cran.rstudio.com/'), download.file.method = 'libcurl')" >> /usr/local/lib/R/etc/Rprofile.site
+RUN apt-get update && apt-get install -y  git-core make pandoc pandoc-citeproc libcurl4-openssl-dev libssl-dev libxml>
+RUN echo "options(repos = c(CRAN = 'https://cran.rstudio.com/'), download.file.method = 'libcurl')" >> /usr/local/lib>
 RUN R -e 'install.packages("remotes")'
-RUN Rscript -e 'remotes::install_version(upgrade="never",package = "systemfonts", version = "0.1.1")'
+RUN Rscript -e 'remotes::install_version(upgrade="never",package = "systemfonts", version = "1.0.4")'
+RUN Rscript -e 'remotes::install_version(upgrade="never",package = "textshaping", version = "0.3.6")'
 RUN Rscript -e 'remotes::install_version(upgrade="never",package = "tidyverse", version = "2.0.0")'
 RUN Rscript -e 'remotes::install_github("rstudio/parsons",upgrade="never")'
-RUN Rscript -e 'remotes::install_version(upgrade="never",package = "learnr", version = "0.11.3")'
-## RUN Rscript -e 'remotes::install_version(upgrade="never",package = "tidyverse", version = "1.2.1")'
+RUN Rscript -e 'remotes::install_version(upgrade="never",package = "learnr", version = "0.11.4")'
 # RUN Rscript -e 'remotes::install_version(upgrade="never",package = "magrittr", version = "1.5")'
 # RUN Rscript -e 'remotes::install_version(upgrade="never",package = "purrr", version = "0.3.3")'
 # RUN Rscript -e 'remotes::install_version(upgrade="never",package = "rmarkdown", version = "1.16")'
